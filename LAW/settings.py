@@ -35,8 +35,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # My app
     "user",
     "show",
+    "chamber",
 ]
 
 MIDDLEWARE = [
@@ -112,3 +114,7 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATIC_URL = 'static/'
+
+LOGIN_REDIRECT_URL = '/chamber/'
+LOGOUT_REDIRECT_URL = '/'
+

@@ -1,0 +1,10 @@
+ {% extends "user/base.html" %}
+
+
+{% block sidebar %}
+
+<form method="POST">{% csrf_token %}
+{{ form.as_p}}
+    <input type="submit" class="btn bg-light">
+</form>
+    {% endblock %}

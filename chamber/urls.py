@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from chamber.views import *
+
 urlpatterns = [
-    path("YWRtaW4=/", admin.site.urls),#tihomv mohit9742
-    path('', include('user.urls')),
-    path('', include('show.urls')),
-    path('chamber/', include('chamber.urls')),
+    path('', ChamberHome.as_view()),
+    path('addcase/', AddCase.as_view(),name="case.new"),
+    path('casedetail/<int:pk>', CaseDetail.as_view(),name="case.detail"),
 ]

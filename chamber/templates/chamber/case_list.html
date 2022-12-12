@@ -1,0 +1,8 @@
+{% extends "chamber/base.html" %}
+{% block content %}
+<ul>
+    {% for case in cases %}
+    <li><a href="{% url 'case.detail' pk=case.id %}">{{ case.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
